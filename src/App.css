@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Averta-Regular";
+}
+
+h1 {
+  font-family: "Averta-Bold";
+  letter-spacing: 6px;
+  margin: 0;
+  font-size: 64px;
+  text-align: center;
+}
+
+p {
+  font-family: "Averta-Light";
+  margin: 0;
+  font-size: 24px;
+  margin-top: 16px;
+  letter-spacing: 2px;
+}
+
+span.accent {
+  color: #f7a4b9;
+  font-family: "Averta-Bold";
+}
+
+.slides {
+  background: black;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.slides .slide {
+  width: 100%;
+  height: 100%;
+  color: white;
+  opacity: 0;
+  position: absolute;
+  padding: 64px;
+  box-sizing: border-box;
+  transform: rotateX(80deg);
+  transition: all 300ms ease-in-out;
+}
+
+.slides .slide.active {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.buttons {
+  width: 100%;
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  background: none;
+  border: 1px solid white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: background 300ms linear;
+}
+
+.buttons button:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.buttons button.active {
+  background: white;
+}
+
+ul {
+  padding-left: 32px;
+  margin: 0;
+  list-style: none;
+  padding-top: 60px;
+}
+
+ul li {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+ul li:not(:first-of-type) {
+  margin-top: 16px;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #f7a4b9;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+
